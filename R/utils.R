@@ -73,7 +73,7 @@ choicesWithNames <- function(choices) {
     choicesWithNames(choice)
   }, SIMPLIFY = FALSE)
   missing <- names(choices) == ""
-  names(choices)[missing] <- as.character(choices)[missing]
+  names(choices)[missing] <- as.character(unlist(choices))[missing]
   choices
 }
 
